@@ -22,4 +22,5 @@ The example_article_linkedin.py file runs an example based on the mathematical m
 & &&  x_1,x_2,x_3=0 \enspace or \enspace 1. 
 \end{aligned}](https://latex.codecogs.com/gif.latex?%5Cbegin%7Baligned%7D%20%26%20%5Ctext%7Bmaximize%7D%20%26%20%26%207x_1&plus;4x_2&plus;19x_3%20%5C%5C%20%26%20%5Ctext%7Bsubject%20to%7D%20%26%26%20x_1&plus;x_3%5Cleq1%2C%20%5C%5C%20%26%20%26%26%20x_2&plus;x_3%20%5Cleq1%2C%20%5C%5C%20%26%20%26%26%20x_1%2Cx_2%2Cx_3%3D0%20%5Censpace%20or%20%5Censpace%201.%20%5Cend%7Baligned%7D)
 
+For more details read the introduction in the file (Introduction D-Wave Linear Optimization) in pdf format.
 Suggestions or constructive criticism send an email to valteresj@gmail.com or rmd2.cin@gmail.com.
