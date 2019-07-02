@@ -16,8 +16,8 @@ class optimize_quantum(object):
         features=[]
         for index,k in enumerate(A_eq):
             var1=pd.Series(var)
-            map_p=list(var1[np.where(np.array(k)==1)[0]])
-            g=list(pd.Series(k)[np.where(np.array(k)==1)[0]])
+            map_p=list(var1[np.where(np.array(k)!=0)[0]])
+            g=list(pd.Series(k)[np.where(np.array(k)!=0)[0]])
             g.append(b_eq[index]*-1)
             map_p.append('c')
             g1=[]
