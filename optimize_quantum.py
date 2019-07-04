@@ -36,23 +36,26 @@ class optimize_quantum(object):
                         value.sort()
                         value='||'.join(value)
                         tipo.append(value)
-            
-            value=[]
-            maping=[] 
-            g1=pd.Series(g1)           
-            for i in np.unique(tipo):
-                value.append(sum(g1[np.where(np.array(tipo)==i)[0]]))
-                maping.append(i)
                 
+            
+            
+            g1=pd.Series(g1)  
+            cont=0
+            dt=pd.DataFrame({'var':tipo,'value':g1}).groupby('var').sum()
+            value=list(dt['value'])
+            maping=list(dt.index)
+            
+  
             contrainst.extend(value)
             features.extend(maping)
+            print(index)
             
-        value=[]
-        maping=[] 
-        g1=pd.Series(contrainst)           
-        for i in np.unique(features):
-            value.append(sum(g1[np.where(np.array(features)==i)[0]]))
-            maping.append(i)
+    
+        dt=pd.DataFrame({'var':features,'value':contrainst}).groupby('var').sum()
+        value=list(dt['value'])
+        maping=list(dt.index)
+
+         
         
         if value.count(0)>0:
            value=list(pd.Series(value)[np.where(np.array(value)!=0)[0]])
